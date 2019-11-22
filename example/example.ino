@@ -11,7 +11,7 @@
  
  Example illustrates the rotation of a DC motor attach to pins 9 & 10 of arduino either directly or through a motor driver.
  The Motor takes 2000 miliseconds to complete 1 revolution. 
- The motor rotates to an angle of 25 degrees and after 0.5 seconds, rotates in reverse diraction to same angle i.e. 25 degrees
+ The motor rotates to an angle of 180 degrees and after 0.5 seconds, rotates in reverse diraction to same angle i.e. 180 degrees
 */
 
 
@@ -32,8 +32,11 @@ void setup()
 
 void loop() {
 
+ // Moving 180 degrees
 DC_to_SERVO(DC_1, DC_2, 2000,180);
 delay(500);
+ 
+ // Moving back 180 degrees
 DC_to_SERVO(DC_1, DC_2, 2000,-180);
 delay(500);
   
